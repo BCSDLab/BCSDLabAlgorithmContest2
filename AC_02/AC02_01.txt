@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+    int a, b, c, d, temp = 0, flag = 0;
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+
+    if (a > b){
+        temp = a;
+        a = b;
+        b = temp;
+    }
+    
+    if (a < c && c < b) flag++;
+    if (a < d && d < b) flag++;
+    
+    if (flag == 1) printf("cross");
+    else printf("not cross");
+
+    return 0;
+}
