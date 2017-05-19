@@ -1,0 +1,35 @@
+nclude <stdio.h>
+
+int main() {
+	int a, b, c, d;
+	int max, min;
+
+	scanf("%d%d", &a,&b);
+	
+	scanf("%d%d", &c, &d);
+
+	max = min = 0;
+
+	if (a > b) {
+		max = a;
+		min = b;
+	}
+	else {
+		max = b;
+		min = a;
+	}
+
+	if ((c < max && c > min)) {
+		if ((d > max || d < min)) {
+			printf("cross\n");
+		}
+	}
+	else if ((d < max && d > min)) {
+		if ((c > max || c < min)) {
+			printf("cross\n");
+		}
+	}
+	else {
+		printf("not cross\n");
+	}
+}
